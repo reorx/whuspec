@@ -8,6 +8,14 @@ import settings
 app = TorextApp(settings)
 app.setup()
 
+app.route_many([
+    ('', 'views'),
+    #('/user', 'user.views'),
+    #('/skill', 'skill.views'),
+    #('/spec', 'spec.views'),
+    #('/course', 'course.views'),
+])
+
 
 if __name__ == '__main__':
 
