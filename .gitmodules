@@ -1,0 +1,3 @@
+[submodule "whuspec/static/Flat-UI"]
+	path = whuspec/static/Flat-UI
+	url = git@github.com:designmodo/Flat-UI.git
