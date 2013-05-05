@@ -5,7 +5,7 @@ body {
 }
 
 body {
-    background: #f5f5f5;
+    background: #fafafa;
 }
 
 .container,
@@ -51,14 +51,15 @@ body {
     padding: 15px 20px;
     font-size: 18px;
     color: #fff;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.11);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.16);
     text-shadow: none;
 }
 .navbar .nav > li > a:hover {
     background: #fff;
     color: #3498DB;
     border-right: 1px solid #3498DB;
+    box-shadow: none;
 }
 .navbar .nav > li > ul {
     left: 0;
@@ -77,6 +78,81 @@ body {
 }
 
 #main {
+    margin-top: 20px;
     /* test */
     height: 500px;
+}
+
+.column {
+    float: left;
+}
+.column-left {
+    width: 680px;
+}
+.column-right {
+    width: 260px;
+    margin-left: 20px;
+}
+
+.record-button {
+    background: #eee;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: none;
+}
+.record-button:hover {
+    background: #ddd;
+    box-shadow: 0 0 1px #ddd;
+}
+.record {
+    /*display: none;*/
+    height: 300px;
+    background: #fff;
+    border: #ddd;
+    box-shadow: 0 0 3px #bbb;
+}
+.record .line {
+    position: relative;
+    /*background: #9cbfd6;*/
+    background: #ececec;
+    height: 30px;
+    /*border-bottom: 1px solid #ddd;*/
+    box-shadow: 0 1px 3px #ddd;
+}
+.record .line > .item {
+    float: left;
+    position: relative;
+}
+.record .line > .item > .name,
+.record .line > .item > .input {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+.record .line > .item > .name {
+    background: rgba(52, 152, 219, 0.7);
+    color: #fff;
+    padding: 0 8px;
+    box-shadow: inset 0 0 1px #aaa;
+}
+.record input.datepicker {
+    height: 30px;
+    border: 0;
+    padding: 0 10px;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+}
+.record .line .close {
+    float: right;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    background: #b5b5b5;
 }
