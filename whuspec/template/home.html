@@ -41,12 +41,29 @@
                     <div class="line">
                         <div class="item date">
                             <div class="name">Date</div>
-                            <input type="text" class="datepicker" value="">
-                            <!-- <div class="input">2013-05-06</div> -->
-                            <!-- <div class="datepicker"></div> -->
+                            <input type="text" name="date" class="datepicker" value="">
+                        </div>
+                        <div class="item object">
+                            <div class="name">Object</div>
+                            <input type="text" name="object">
                         </div>
 
                         <div class="close">⨯</div>
+                    </div>
+                    <div class="content">
+                        <textarea name="content" id="" placeholder="Content"></textarea>
+                    </div>
+                    <div class="line">
+                        <div class="item publicity">
+                            <div class="name">Publicity</div>
+                            <div class="input toggle">
+                                <label class="toggle-radio" for="toggleOption2">ON</label>
+                                <input type="radio" name="toggleOptions" id="toggleOption1" value="option1" checked="checked">
+                                <label class="toggle-radio" for="toggleOption1">OFF</label>
+                                <input type="radio" name="toggleOptions" id="toggleOption2" value="option2">
+                            </div>
+                        </div>
+                        <a class="submit-button" href="#">Submit</a>
                     </div>
 
                 </div>

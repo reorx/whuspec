@@ -7,6 +7,9 @@ body {
 body {
     background: #fafafa;
 }
+a {
+    text-decoration: none;
+}
 
 .container,
 .navbar .container {
@@ -110,7 +113,6 @@ body {
 }
 .record {
     /*display: none;*/
-    height: 300px;
     background: #fff;
     border: #ddd;
     box-shadow: 0 0 3px #bbb;
@@ -121,7 +123,7 @@ body {
     background: #ececec;
     height: 30px;
     /*border-bottom: 1px solid #ddd;*/
-    box-shadow: 0 1px 3px #ddd;
+    /*box-shadow: 0 1px 3px #ddd;*/
 }
 .record .line > .item {
     float: left;
@@ -139,13 +141,16 @@ body {
     padding: 0 8px;
     box-shadow: inset 0 0 1px #aaa;
 }
-.record input.datepicker {
+.record .line > .item > input {
     height: 30px;
     border: 0;
     padding: 0 10px;
     margin: 0;
     border-radius: 0;
     background: transparent;
+}
+input.datepicker {
+    width: 100px;
 }
 .record .line .close {
     float: right;
@@ -155,4 +160,35 @@ body {
     line-height: 25px;
     text-align: center;
     background: #b5b5b5;
+}
+
+.record .content > textarea {
+    display: block;
+    width: 650px;
+    padding: 10px 15px;
+    min-height: 200px;
+    border: 0;
+    resize: none;
+}
+.record .line .item .toggle {
+    border-radius: 0;
+}
+
+.record .line .submit-button {
+    display: block;
+    float: right;
+    background: #2ECC71;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 18px;
+}
+.record .line .submit-button:hover {
+    background: #27AE60;
+}
+.record .line .submit-button:active {
+    color: #2ECC71;
+    background: #fff;
+    box-shadow: 0 0 3px #ccc;
 }
