@@ -8,7 +8,8 @@ body {
     background: #f5f5f5;
 }
 
-.container {
+.container,
+.navbar .container {
     margin-left: auto;
     margin-right: auto;
     width: 960px;
@@ -18,17 +19,61 @@ body {
     /*
     background: #2578b5;
     background: #2e548c;
-    */
     background: #39619b;
+    */
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 1px solid #eee;
+    background: #3498DB;
 
     /* test */
-    height: 60px;
+    /*height: 60px;*/
 }
 
-#header .logo {
+#header a.logo {
+    display: block;
+    float: left;
     color: #fff;
-    font-size: 35px;
+    font-size: 26px;
     font-weight: bold;
+    padding: 8px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar .nav {
+    margin-left: 50px;
+}
+
+.navbar .nav > li > a {
+    padding: 15px 20px;
+    font-size: 18px;
+    color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.11);
+    text-shadow: none;
+}
+.navbar .nav > li > a:hover {
+    background: #fff;
+    color: #3498DB;
+    border-right: 1px solid #3498DB;
+}
+.navbar .nav > li > ul {
+    left: 0;
+    width: 150px;
+}
+.navbar .nav > li > ul:before {
+    border-color: transparent transparent #2980B9 transparent;
+}
+.navbar .nav > li > ul > li{
+    background-color: #2980B9;
+}
+
+.navbar .nav-right {
+    float: right;
+    border-left: 0;
 }
 
 #main {

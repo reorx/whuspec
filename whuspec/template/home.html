@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <title></title>
     <link media="all" rel="stylesheet" href="/static/css/normalize.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/bootstrap.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/flat-ui.css" type="text/css" />
+
     <link media="all" rel="stylesheet" href="/static/css/base.css" type="text/css" />
 </head>
 <body>
-    <div id="header">
+    <div id="header" class="navbar">
         <div class="container">
             <a href="#" class="logo">WHUSpec</a>
+            <ul class="nav">
+                <li>
+                    <a href="/specs">专项</a>
+                    <ul>
+                        <li><a href="/specs/me">我的专项</a></li>
+                        <li><a href="/specs/make">制作专项</a></li>
+                    </ul>
+                </li>
+                <li><a href="/skills">技能</a></li>
+                <li><a href="/courses">课程</a></li>
+            </ul>
+            <ul class="nav nav-right">
+                <li>
+                    <a href="/signin" class="account">登录/注册</a>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="main">
