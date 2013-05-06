@@ -1,8 +1,21 @@
+/*
+ * Colors:
+ *  lightest shadow: #fafafa;
+ *  lighter shadow: #ececec;
+ *  main blue: rgb(52, 152, 219);
+ *  dark blue: rgb(41, 128, 185);
+ *  green: rgb(46, 204, 113);
+ *  dark green: rgb(39, 174, 96);
+ *  main font color: #34495e;
+ *
+ */
 
+/* How to make body in one color when #main is low in height?
 html,
 body {
     height: 100%;
 }
+*/
 
 body {
     background: #fafafa;
@@ -11,11 +24,29 @@ a {
     text-decoration: none;
 }
 
+.float-container:after {
+   content: " ";
+   display: block;
+   height: 0;
+   clear: both;
+}
+
 .container,
 .navbar .container {
     margin-left: auto;
     margin-right: auto;
     width: 960px;
+}
+
+.ui-box {
+    background: #fff;
+    box-shadow: 0 0 3px #ddd;
+}
+.ui-box > .title {
+    color: rgb(41, 128, 185);
+    font-size: 20px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
 }
 
 #header {
@@ -78,23 +109,33 @@ a {
 .navbar .nav-right {
     float: right;
     border-left: 0;
+    margin-right: 0;
+}
+.navbar .nav-right .separator {
+    width: 1px;
+    height: 50px;
+    /*left: 1px;*/
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.16);
 }
 
 #main {
-    margin-top: 20px;
-    /* test */
-    height: 500px;
+    margin: 30px 0;
+}
+
+#main .container {
+    background: transparent;
 }
 
 .column {
     float: left;
 }
 .column-left {
-    width: 680px;
+    width: 670px;
 }
 .column-right {
     width: 260px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .record-button {
@@ -113,9 +154,6 @@ a {
 }
 .record {
     /*display: none;*/
-    background: #fff;
-    border: #ddd;
-    box-shadow: 0 0 3px #bbb;
 }
 .record .line {
     position: relative;
@@ -136,7 +174,7 @@ a {
     float: left;
 }
 .record .line > .item > .name {
-    background: rgba(52, 152, 219, 0.7);
+    background: rgba(52, 152, 219, 0.8);
     color: #fff;
     padding: 0 8px;
     box-shadow: inset 0 0 1px #aaa;
@@ -149,8 +187,13 @@ a {
     border-radius: 0;
     background: transparent;
 }
-input.datepicker {
+
+.record .line > .item.date > input[name="date"] {
     width: 100px;
+    color: inherit;
+}
+.record .line > .item.date > input[name="date"] + .tooltip {
+    display: none;
 }
 .record .line .close {
     float: right;
@@ -164,11 +207,14 @@ input.datepicker {
 
 .record .content > textarea {
     display: block;
-    width: 650px;
     padding: 10px 15px;
     min-height: 200px;
     border: 0;
     resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
 }
 .record .line .item .toggle {
     border-radius: 0;
@@ -183,7 +229,7 @@ input.datepicker {
     background: #fff;
     width: 30px;
     height: 30px;
-    box-shadow: inset 0 0 8px #e1e1e1;
+    box-shadow: inset 0 0 8px #eee;
 }
 .record .line .item.publicity .input .label-checkbox input[type="checkbox"] {
     display: none;
@@ -192,7 +238,7 @@ input.datepicker {
     display: block;
     margin: 5px;
     height: 20px;
-    background: #ddd;
+    background: #e3e3e3;
 }
 .record .line .item.publicity .input .label-checkbox input[type="checkbox"]:checked + .mark {
     background: rgba(52, 152, 219, 0.8);
@@ -224,4 +270,94 @@ input.datepicker {
     color: #2ECC71;
     background: #fff;
     box-shadow: inset 0 0 8px #dadada;
+}
+
+.stream {
+    min-height: 300px;
+    margin-top: 30px;
+}
+
+.stream .nav {
+    background: rgb(236, 236, 236);
+}
+.stream .nav li {
+    float: left;
+}
+.stream .nav li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(52, 152, 219, 0.8);
+}
+
+.learning,
+.followings,
+.followers {
+    margin-top: 20px;
+    padding: 0 10px 20px;
+}
+
+.learning .title {
+}
+
+.learning .specs,
+.learning .skills {
+    /*padding: 0 10px;*/
+}
+/*
+.learning .specs {
+    border-bottom: 1px solid #ddd;
+}
+*/
+
+.learning .specs .item .name {
+    margin: 10px 0;
+}
+.learning .specs .item .name .progress-number {
+    display: block;
+    float: right;
+    font-style: italic;
+}
+.learning .specs .item .progress .bar {
+    background: rgb(39, 174, 96);
+}
+
+.learning .skills {
+}
+.learning .skills .item .name {
+    margin: 10px 0;
+}
+.learning .skills .item .name .level {
+    display: block;
+    float: right;
+    font-style: italic;
+}
+
+.follow-list .follow-list-container {
+}
+
+/* 3 * 16 + 4 * 48 = 240 */
+/* 4 * 15 + 5 * 36 = 240 */
+.follow-list .item {
+    margin: 15px 0 0 15px;
+    width: 36px;
+    height: 36px;
+    float: left;
+}
+.follow-list .item:nth-child(5n+1) {
+    margin-left: 0;
+}
+.follow-list .item img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#footer {
+    /* test */
+    height: 100px;
+
+    background: #fff;
 }

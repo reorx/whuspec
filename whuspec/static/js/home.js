@@ -32,19 +32,29 @@ $(function() {
         $('.record-button').show();
     });
 
-    $('.record .datepicker').datepicker({
+    var dateFormat = "yy-mm-dd";
+    var dp = $('.column-right .datepicker').datepicker({
         // inline: true,
         prevText: "<",
         nextText: ">",
-        dateFormat: "yy-mm-dd",
+        dateFormat: dateFormat,
         showMonthAfterYear: true,
         monthNames: [
             "一月", "二月", "三月", "四月",
             "五月", "六月", "七月", "八月",
             "九月", "十月", "十一月", "十二月"],
         dayNamesMin: ["日", "一", "二", "三",
-            "四", "五", "六"]
-    }).datepicker('setDate', new Date());
+            "四", "五", "六"],
+
+        // select event
+        onSelect: function(dateText, dp) {
+            $('.record .date input[name="date"]').val(dateText);
+        }
+    });
+
+    // $('.record .date input[name="date"]').on('keydown keypress keyup', false);
+    $('.record .date input[name="date"]').val(
+        $.datepicker.formatDate(dateFormat, dp.datepicker('getDate')));
 
     $(".toggle").each(function(index, toggle) {
         toggleHandler(toggle);
