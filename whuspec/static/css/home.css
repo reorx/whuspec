@@ -1,0 +1,215 @@
+
+.record-button {
+    background: #eee;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    display: none;
+}
+.record-button:hover {
+    background: #ddd;
+    box-shadow: 0 0 1px #ddd;
+}
+.record {
+    /*display: none;*/
+}
+.record .line {
+    position: relative;
+    /*background: #9cbfd6;*/
+    background: #ececec;
+    height: 30px;
+    /*border-bottom: 1px solid #ddd;*/
+    /*box-shadow: 0 1px 3px #ddd;*/
+}
+.record .line > .item {
+    float: left;
+    position: relative;
+}
+.record .line > .item > .name,
+.record .line > .item > .input {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+.record .line > .item > .name {
+    background: rgba(52, 152, 219, 0.8);
+    color: #fff;
+    padding: 0 8px;
+    box-shadow: inset 0 0 1px #aaa;
+}
+.record .line > .item > input {
+    height: 30px;
+    border: 0;
+    padding: 0 10px;
+    margin: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.record .line > .item.date > input[name="date"] {
+    width: 100px;
+    color: inherit;
+}
+.record .line > .item.date > input[name="date"] + .tooltip {
+    display: none;
+}
+.record .line .close {
+    float: right;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    background: #b5b5b5;
+}
+
+.record .content > textarea {
+    display: block;
+    padding: 10px 15px;
+    min-height: 200px;
+    border: 0;
+    resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+.record .line .item .toggle {
+    border-radius: 0;
+}
+
+.record .line .item.publicity .input {
+}
+.record .line .item.publicity .input .label-checkbox {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    box-shadow: inset 0 0 8px #eee;
+}
+.record .line .item.publicity .input .label-checkbox input[type="checkbox"] {
+    display: none;
+}
+.record .line .item.publicity .input .label-checkbox .mark {
+    display: block;
+    margin: 5px;
+    height: 20px;
+    background: #e3e3e3;
+}
+.record .line .item.publicity .input .label-checkbox input[type="checkbox"]:checked + .mark {
+    background: rgba(52, 152, 219, 0.8);
+}
+.record .line .item.publicity .input .label-checkbox input[type="checkbox"]:checked + .mark::after {
+    display: block;
+    /* Unicode U+2713 ✓ check mark*/
+    content: "\2713";
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.record .line .submit-button {
+    display: block;
+    float: right;
+    background: #2ECC71;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 18px;
+}
+.record .line .submit-button:hover {
+    background: #27AE60;
+}
+.record .line .submit-button:active {
+    color: #2ECC71;
+    background: #fff;
+    box-shadow: inset 0 0 8px #dadada;
+}
+
+.stream {
+    min-height: 300px;
+    margin-top: 30px;
+}
+
+.stream .nav {
+    background: rgb(236, 236, 236);
+}
+.stream .nav li {
+    float: left;
+}
+.stream .nav li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(52, 152, 219, 0.8);
+}
+
+.learning,
+.followings,
+.followers {
+    margin-top: 20px;
+    padding: 0 10px 20px;
+}
+
+.learning .title {
+}
+
+.learning .specs,
+.learning .skills {
+    /*padding: 0 10px;*/
+}
+/*
+.learning .specs {
+    border-bottom: 1px solid #ddd;
+}
+*/
+
+.learning .specs .item .name {
+    margin: 10px 0;
+}
+.learning .specs .item .name .progress-number {
+    display: block;
+    float: right;
+    font-style: italic;
+}
+.learning .specs .item .progress .bar {
+    background: rgb(39, 174, 96);
+}
+
+.learning .skills {
+}
+.learning .skills .item .name {
+    margin: 10px 0;
+}
+.learning .skills .item .name .level {
+    display: block;
+    float: right;
+    font-style: italic;
+}
+
+.follow-list .follow-list-container {
+}
+
+/* 3 * 16 + 4 * 48 = 240 */
+/* 4 * 15 + 5 * 36 = 240 */
+.follow-list .item {
+    margin: 15px 0 0 15px;
+    width: 36px;
+    height: 36px;
+    float: left;
+}
+.follow-list .item:nth-child(5n+1) {
+    margin-left: 0;
+}
+.follow-list .item img {
+    width: 100%;
+    height: 100%;
+}

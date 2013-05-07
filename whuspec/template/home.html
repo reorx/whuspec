@@ -1,193 +1,152 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link media="all" rel="stylesheet" href="/static/css/normalize.css" type="text/css" />
-    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/bootstrap.css" type="text/css" />
-    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/flat-ui.css" type="text/css" />
+{% extends base.html %}
 
-    <link media="all" rel="stylesheet" href="/static/css/base.css" type="text/css" />
+{% block head %}
     <link media="all" rel="stylesheet" href="/static/css/component-datepicker.css" type="text/css" />
-</head>
-<body>
-    <div id="header" class="navbar">
-        <div class="container">
-            <a href="#" class="logo">WHUSpec</a>
-            <ul class="nav">
-                <li>
-                    <a href="/specs">专项</a>
-                    <ul>
-                        <li><a href="/specs/me">我的专项</a></li>
-                        <li><a href="/specs/make">制作专项</a></li>
-                    </ul>
-                </li>
-                <li><a href="/skills">技能</a></li>
-                <li><a href="/courses">课程</a></li>
-            </ul>
-            <ul class="nav nav-right">
-                <li class="separator"></li>
-                <li>
-                    <a href="/signin" class="account">登录/注册</a>
-                </li>
-            </ul>
+    <link media="all" rel="stylesheet" href="/static/css/home.css" type="text/css" />
+{% end %}
+
+{% block column_left %}
+    <div class="record-button">Learning record</div>
+
+    <div class="ui-box record">
+        <div class="line">
+            <div class="item date">
+                <div class="name">Date</div>
+                <!--
+                <input type="text" name="date" class="datepicker" value="">
+                -->
+                <input type="text" name="date" class="" value="" readonly="readonly">
+                <div class="tooltip fade bottom in" style="top: 0px; left: 0px; "><div class="tooltip-arrow" style=""></div><div class="tooltip-inner">Tooltip under the text.</div></div>
+            </div>
+            <div class="item object">
+                <div class="name">Object</div>
+                <input type="text" name="object">
+            </div>
+
+            <div class="close">⨯</div>
+        </div>
+        <div class="content">
+            <textarea name="content" id="" placeholder="Content"></textarea>
+        </div>
+        <div class="line">
+            <div class="item publicity">
+                <div class="name">Publicity</div>
+                <div class="input">
+                    <label class="label-checkbox checked" for="publicity-checkbox">
+                        <input type="checkbox" checked="checked" value="" id="publicity-checkbox">
+                        <span class="mark"></span>
+                    </label>
+                </div>
+            </div>
+            <a class="submit-button" href="#">Submit</a>
         </div>
     </div>
-    <div id="main">
-        <div class="container">
 
-            <div class="column column-left">
-                <div class="record-button">Learning record</div>
+    <div class="ui-box stream">
+        <ul class="nav float-container">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Learn</a></li>
+            <li><a href="#">Mark & Create</a></li>
+        </ul>
+        <div class="stream-container">
+        </div>
 
-                <div class="ui-box record">
-                    <div class="line">
-                        <div class="item date">
-                            <div class="name">Date</div>
-                            <!--
-                            <input type="text" name="date" class="datepicker" value="">
-                            -->
-                            <input type="text" name="date" class="" value="" readonly="readonly">
-                            <div class="tooltip fade bottom in" style="top: 0px; left: 0px; "><div class="tooltip-arrow" style=""></div><div class="tooltip-inner">Tooltip under the text.</div></div>
-                        </div>
-                        <div class="item object">
-                            <div class="name">Object</div>
-                            <input type="text" name="object">
-                        </div>
+    </div>
+{% end %}
 
-                        <div class="close">⨯</div>
-                    </div>
-                    <div class="content">
-                        <textarea name="content" id="" placeholder="Content"></textarea>
-                    </div>
-                    <div class="line">
-                        <div class="item publicity">
-                            <div class="name">Publicity</div>
-                            <div class="input">
-                                <label class="label-checkbox checked" for="publicity-checkbox">
-                                    <input type="checkbox" checked="checked" value="" id="publicity-checkbox">
-                                    <span class="mark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <a class="submit-button" href="#">Submit</a>
-                    </div>
+{% block column_right %}
+    <div class="ui-box datepicker"></div>
+
+    <div class="ui-box learning">
+        <div class="title">Specs</div>
+        <div class="specs">
+            <div class="item">
+                <div class="name">
+                    <a href="#">Python Web Developer</a>
+                    <span class="progress-number">75%</span>
                 </div>
-
-                <div class="ui-box stream">
-                    <ul class="nav float-container">
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Learn</a></li>
-                        <li><a href="#">Mark & Create</a></li>
-                    </ul>
-                    <div class="stream-container">
-                    </div>
-
+                <div class="progress">
+                    <div class="bar" style="width: 75%;"></div>
                 </div>
-
             </div>
-            <div class="column column-right">
-                <div class="ui-box datepicker">
 
+            <div class="item">
+                <div class="name">
+                    <a href="#">English Translator</a>
+                    <span class="progress-number">25%</span>
                 </div>
-
-                <div class="ui-box learning">
-                    <div class="title">Specs</div>
-                    <div class="specs">
-                        <div class="item">
-                            <div class="name">
-                                <a href="#">Python Web Developer</a>
-                                <span class="progress-number">75%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="bar" style="width: 75%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="name">
-                                <a href="#">English Translator</a>
-                                <span class="progress-number">25%</span>
-                            </div>
-                            <div class="progress">
-                                <div class="bar" style="width: 25%;"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="title">Skills</div>
-                    <div class="skills">
-                        <div class="item">
-                            <div class="name">
-                                <a href="#">Python</a>
-                                <span class="level">lv 4</span>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="name">
-                                <a href="#">HTML</a>
-                                <span class="level">lv 3</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="progress">
+                    <div class="bar" style="width: 25%;"></div>
                 </div>
+            </div>
 
-                <div class="ui-box followings follow-list">
-                    <div class="title">Followings</div>
-                    <div class="follow-list-container float-container">
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_0.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_1.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_3.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_3.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
+        </div>
+        <div class="title">Skills</div>
+        <div class="skills">
+            <div class="item">
+                <div class="name">
+                    <a href="#">Python</a>
+                    <span class="level">lv 4</span>
                 </div>
+            </div>
 
-                <div class="ui-box followers follow-list">
-                    <div class="title">Followers</div>
-                    <div class="follow-list-container float-container">
-                        <div class="item">
-                            <a href="#">
-                                <img src="/static/img/avatar_3.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
+            <div class="item">
+                <div class="name">
+                    <a href="#">HTML</a>
+                    <span class="level">lv 3</span>
                 </div>
-
             </div>
         </div>
     </div>
-    <div id="footer">
+
+    <div class="ui-box followings follow-list">
+        <div class="title">Followings</div>
+        <div class="follow-list-container float-container">
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_0.jpg" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_1.jpg" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_2.jpg" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_3.jpg" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_2.jpg" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_3.jpg" alt="">
+                </a>
+            </div>
+        </div>
     </div>
 
-    <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/jquery-ui.custom.min.js"></script>
+    <div class="ui-box followers follow-list">
+        <div class="title">Followers</div>
+        <div class="follow-list-container float-container">
+            <div class="item">
+                <a href="#">
+                    <img src="/static/img/avatar_3.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+{% end %}
+
+{% block script %}
     <script type="text/javascript" src="/static/js/home.js"></script>
-
-</body>
-</html>
+{% end %}

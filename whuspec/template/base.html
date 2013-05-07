@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link media="all" rel="stylesheet" href="/static/css/normalize.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/bootstrap.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="/static/Flat-UI/css/flat-ui.css" type="text/css" />
+
+    <link media="all" rel="stylesheet" href="/static/css/base.css" type="text/css" />
+
+    {% block head %}
+    {% end %}
+</head>
+<body>
+    <div id="header" class="navbar">
+        <div class="container">
+            <a href="#" class="logo">WHUSpec</a>
+            <ul class="nav">
+                <li>
+                    <a href="/specs">专项</a>
+                    <ul>
+                        <li><a href="/specs/me">我的专项</a></li>
+                        <li><a href="/specs/make">制作专项</a></li>
+                    </ul>
+                </li>
+                <li><a href="/skills">技能</a></li>
+                <li><a href="/courses">课程</a></li>
+            </ul>
+            <ul class="nav nav-right">
+                <li class="separator"></li>
+                <li>
+                    <a href="/signin" class="account">登录/注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+
+            <div class="column column-left">
+                {% block column_left %}
+                {% end %}
+            </div>
+
+            <div class="column column-right">
+                {% block column_right %}
+                {% end %}
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    </div>
+
+    <script type="text/javascript" src="/static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui.custom.min.js"></script>
+
+    {% block script %}
+    {% end %}
+
+</body>
+</html>
