@@ -33,6 +33,7 @@ class Skill(Document):
         ],
         'name': str,
         'description': str,
+        'top_level': int,
         'course_id': ObjectId,
     })
 
@@ -47,12 +48,10 @@ class Speciality(Document):
                 'id': ObjectId
             }
         ],
-        'level': int,
         'name': str,
         'description': str,
         'creator_id': ObjectId,
         'created_at': datetime.datetime,
-        'follower_ids': [ObjectId],
     })
 
 
@@ -81,6 +80,12 @@ class User(Document):
 
         # School information
         'student_number': str,
+
+        # skills and specs
+        'learning_skill_ids': [],
+        'learning_specs_ids': [],
+        'marked_skill_ids': [],
+        'marked_specs_ids': []
     })
 
     @classmethod

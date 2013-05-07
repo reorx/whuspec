@@ -1,0 +1,39 @@
+{% extends ../base.html %}
+
+{% block head %}
+{% end %}
+
+{% block column_left %}
+    <div class="">
+        <div class="title">Learning most</div>
+    </div>
+    <div class="">
+        <div class="title">Latest created</div>
+    </div>
+    <div class="">
+        <div class="title">Tag cloud</div>
+    </div>
+{% end %}
+
+{% block column_right %}
+    <div class="ui-box">
+        <div class="title">What is spec?</div>
+        <div class="content">
+            <ul>
+                <li>
+专项是对一个人掌握多个技能之后，所形成能力的整体描述。可以理解为多个技能的集合。如图中的“Python Web Developing”就是专项。
+                </li>
+                <li>
+专项可以自由进行定义，相同名字的专项也没有固定的定义。用户可以对系统给出的推荐专项克隆自己的分支（fork），在其基础上修改，形成自己的专项定义。
+                </li>
+                <li>
+专项是用户使用本系统所要达到的主要目标。当用户定义或添加了自己的专项之后，其会被标识一个由所包含的技能和用户已掌握技能确定的完成进度。
+                </li>
+            </ul>
+            <a href="#" class="btn btn-large btn-block btn-info">Create your own</a>
+        </div>
+    </div>
+{% end %}
+
+{% block script %}
+{% end %}
