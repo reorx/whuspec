@@ -1,0 +1,52 @@
+{% extends ../base.html %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/signup.css">
+{% end %}
+
+{% block column_left %}
+    <div class="ui-box">
+        <div class="title">欢迎使用 WHUSpec</div>
+        <div class="content">
+            <form action="/users/signup" method="POST">
+                <div class="float-container">
+                    <label for="signup-email">Email</label>
+                    <input type="text" name="email" id="signup-email">
+                </div>
+                <div class="float-container">
+                    <label for="signup-username">Username</label>
+                    <input type="text" name="username" id="signup-username">
+                </div>
+                <div class="float-container">
+                    <label for="signup-password">Password</label>
+                    <input type="text" name="password" id="signup-password">
+                </div>
+                <div class="float-container">
+                    <label for="signup-password-repeat">Repeat password</label>
+                    <input type="text" name="password_repeat" id="signup-password-repeat">
+                </div>
+                <div class="float-container">
+                    <label for="signup-gender">Gender</label>
+                    <input type="text" name="gender" id="signup-gender">
+                </div>
+                <div class="float-container">
+                    <input class="btn btn-large btn-block btn-success" type="submit" value="Signup">
+                </div>
+            </form>
+        </div>
+    </div>
+{% end %}
+
+{% block column_right %}
+    <div class="ui-box">
+        <div class="title">注意事项</div>
+        <div class="content">
+            <ul>
+                <li>username should be longer than 4 letters</li>
+            </ul>
+        </div>
+    </div>
+{% end %}
+
+{% block script %}
+{% end %}

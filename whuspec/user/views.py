@@ -10,6 +10,9 @@ class SigninHandler(BaseHandler):
 
 
 class SignupHandler(BaseHandler):
+    def get(self):
+        self.render('user/signup.html')
+
     def post(self):
         pass
 

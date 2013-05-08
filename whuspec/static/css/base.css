@@ -24,8 +24,9 @@ a {
     text-decoration: none;
 }
 
-.btn {
-    border-radius: 0;
+.btn,
+input {
+    border-radius: 0 !important;
 }
 
 .float-container:after {
@@ -166,6 +167,20 @@ a {
 .column-left {
     width: 670px;
 }
+.column-left .ui-box {
+    padding: 0 20px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+.column-left .ui-box:first-child {
+    margin-top: 0;
+}
+.column-left > div > .title {
+    padding: 20px 0 15px;
+    /*color: ;*/
+}
+
+
 .column-right {
     width: 260px;
     margin-left: 30px;
