@@ -1,17 +1,64 @@
 {% extends ../base.html %}
 
 {% block head %}
+<link rel="stylesheet" href="/static/css/spec.css">
 {% end %}
 
 {% block column_left %}
-    <div class="">
-        <div class="title">Learning most</div>
+    <div class="ui-box list-layout learning-most">
+        <div class="title">学习最多</div>
+        <div class="content">
+            <div class="item">
+                <a href="#" class="name">Python Web Development</a>
+                <div class="info">
+                    <span class="learners">学习者: <a href="#">30</a></span>
+                    <span class="creator">创建者: <a href="#">reorx</a></span>
+                </div>
+                <div class="description">Making web service using Python language, with some popular frameworks include django, flask, tornado and so on.</div>
+            </div>
+            <div class="item">
+                <a href="#" class="name">UI Designer</a>
+                <div class="info">
+                    <span class="learners">学习者: <a href="#">25</a></span>
+                    <span class="creator">创建者: <a href="#">reorx</a></span>
+                </div>
+                <div class="description">Design user interface for different kind of applications, mostly for web and desktop</div>
+            </div>
+        </div>
     </div>
-    <div class="">
-        <div class="title">Latest created</div>
+    <div class="ui-box list-layout latest">
+        <div class="title">最新创建</div>
+        <div class="content">
+            <div class="item">
+                <a href="#" class="name">Project Manager</a>
+                <div class="info">
+                    <span class="learners">学习者: <a href="#">14</a></span>
+                    <span class="creator">创建者: <a href="#">reorx</a></span>
+                </div>
+                <div class="description">Called PM in abbreviation, this title of job covers almost every part from the very start to the end of a project (or product), it requires high technology and knowledge indeed, but many so called PMs don't fulfill that</div>
+            </div>
+        </div>
     </div>
-    <div class="">
-        <div class="title">Tag cloud</div>
+    <div class="ui-box tags">
+        <div class="title">标签云</div>
+        <div class="content float-container">
+            <a href="#">IT</a>
+            <a href="#">design</a>
+            <a href="#">language</a>
+            <a href="#">laws</a>
+            <a href="#">financial</a>
+            <a href="#">management</a>
+            <a href="#">science</a>
+            <a href="#">nature</a>
+            <a href="#">AI</a>
+            <a href="#">sports</a>
+            <a href="#">news</a>
+            <a href="#">dancing</a>
+            <a href="#">machine</a>
+        </div>
+    </div>
+    <div class="bottom-links">
+        <a href="#" class="all">浏览所有</a>
     </div>
 {% end %}
 
@@ -30,7 +77,9 @@
 专项是用户使用本系统所要达到的主要目标。当用户定义或添加了自己的专项之后，其会被标识一个由所包含的技能和用户已掌握技能确定的完成进度。
                 </li>
             </ul>
-            <a href="#" class="btn btn-large btn-block btn-info">Create your own</a>
+            <div class="btn-wrapper">
+                <a href="#" class="btn btn-large btn-block btn-info">Create your own</a>
+            </div>
         </div>
     </div>
 {% end %}

@@ -43,11 +43,13 @@ class Speciality(Document):
     __validate__ = False
     struct = Struct({
         # Nearest skills
+        # the skills combination is unique
         'skills': [
             {
                 'id': ObjectId
             }
         ],
+        # Name is unique
         'name': str,
         'description': str,
         'creator_id': ObjectId,

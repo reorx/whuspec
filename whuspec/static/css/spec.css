@@ -1,0 +1,81 @@
+.column-left .ui-box {
+    padding: 0 20px;
+    padding-bottom: 15px;
+    margin-top: 30px;
+}
+.column-left .ui-box:first-child {
+    margin-top: 0;
+}
+.column-left > div > .title {
+    padding: 20px 0 10px;
+    /*color: ;*/
+}
+
+
+.column-left .list-layout .item {
+    margin: 15px 0;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0 15px;
+}
+.column-left .list-layout .item .name {
+    font-size: 20px;
+    color: #34495e;
+}
+.column-left .list-layout .item .name:hover {
+    color: rgb(52, 152, 219);
+}
+.column-left .list-layout .item .info {
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgba(52, 73, 94, 0.9);
+}
+.column-left .list-layout .item .info a {
+    color: rgba(52, 152, 219, 0.8);
+}
+.column-left .list-layout .item .info .learners {
+}
+.column-left .list-layout .item .info .creator {
+    margin-left: 15px;
+}
+.column-left .list-layout .item .description {
+    margin-top: 8px;
+    font-style: italic;
+    color: #999;
+    font-size: 12px;
+}
+
+.tags .content {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.tags .content > a {
+    display: block;
+    float: left;
+    background: #f3f3f3;
+    color: #34495e;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+}
+.bottom-links {
+    margin-top: 20px;
+}
+.bottom-links > a {
+    float: right;
+}
+
+
+.column-right .ui-box .content ul {
+    list-style: square;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+.column-right .ui-box .content ul li {
+    font-size: 13px;
+    margin-top: 10px;
+}
+.column-right .ui-box .content .btn-wrapper {
+    margin: 0 30px;
+}
+.column-right .ui-box .content .btn {
+    padding: 10px;
+}

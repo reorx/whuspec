@@ -6,7 +6,7 @@
  *  dark blue: rgb(41, 128, 185);
  *  green: rgb(46, 204, 113);
  *  dark green: rgb(39, 174, 96);
- *  main font color: #34495e;
+ *  main font color: #34495e rgb(52, 73, 94);
  *
  */
 
@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+.btn {
+    border-radius: 0;
+}
+
 .float-container:after {
    content: " ";
    display: block;
@@ -31,8 +35,9 @@ a {
    clear: both;
 }
 
-.container,
-.navbar .container {
+/*.container,*/
+.navbar .container,
+#main .container {
     margin-left: auto;
     margin-right: auto;
     width: 960px;
@@ -45,7 +50,6 @@ a {
 .ui-box > .title {
     color: rgb(41, 128, 185);
     font-size: 20px;
-    padding: 5px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -172,6 +176,9 @@ a {
 }
 .column-right .ui-box:first-child {
     margin-top: 0;
+}
+.column-right .ui-box .title {
+    padding: 12px 0 10px 0;
 }
 
 #footer {
