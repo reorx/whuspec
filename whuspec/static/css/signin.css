@@ -1,0 +1,31 @@
+.column-left {
+    width: 100%;
+}
+.column-right {
+    display: none;
+}
+.login-form:before {
+    display: none;
+}
+.login-form {
+    width: 313px;
+    margin: 120px auto;
+    padding: 35px 35px 30px;
+    /*background: transparent;*/
+}
+.login-form .btn {
+    margin-top: 15px;
+}
+.login-link {
+    color: #666;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.login-link:hover {
+    color: #16A085;
+}
+.login-form,
+.login-form input,
+.login-form .btn {
+    border-radius: 0;
+}

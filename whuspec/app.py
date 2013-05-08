@@ -10,10 +10,10 @@ app.setup()
 
 app.route_many([
     ('', 'views'),
-    #('/user', 'user.views'),
-    #('/skill', 'skill.views'),
+    ('/users', 'user.views'),
+    #('/skills', 'skill.views'),
     ('/specs', 'spec.views'),
-    #('/course', 'course.views'),
+    #('/courses', 'course.views'),
 ])
 
 
