@@ -1,20 +1,20 @@
-.float-container {
+.line {
     margin-top: 30px;
 }
-.float-container label,
-.float-container input {
+.line label,
+.line input {
     float: left;
 }
-.float-container label {
+.line label {
     font-size: 18px;
     margin: 10px 20px 0 0;
     width: 170px;
     text-align: right;
 }
-.float-container input {
+.line input {
     width: 250px;
 }
-.float-container input[type="submit"] {
+.line input[type="submit"] {
     margin-left: 190px;
     width: 264px;
 }
