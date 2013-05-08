@@ -1,4 +1,3 @@
-
 WHU Speciality
 ==============
 
@@ -11,3 +10,11 @@ Relationship Diagram
 --------------------
 
 .. image:: ./spec_skills_tree.png
+
+References
+----------
+
+Flat-UI: `github.com/designmodo/Flat-UI <http://github.com/designmodo/Flat-UI>`_
+
+    commit 09314bc57221a1184398cf93d56f0c03ac53f6f5
+
