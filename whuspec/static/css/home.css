@@ -178,11 +178,23 @@
     margin-bottom: 10px;
 }
 .stream-items .item .detail-line {
-    color: #666;
-    font-size: 14px;
-    padding-left: 30px;
     /*font-style: italic;*/
     margin-bottom: 10px;
+}
+.stream-items .item .detail-line blockquote {
+    margin-left: 30px;
+    margin-bottom: 0;
+    background: url(/static/img/quotel.gif) no-repeat left 4px;
+    border-left: 0;
+}
+.stream-items .item .detail-line p {
+    color: #666;
+    font-size: 14px;
+    line-height: 18px;
+    display: inline;
+    padding-right: 15px;
+    background: url(/static/img/quoter.gif) no-repeat right bottom;
+    /*font-family: Helvetica, Arial, sans-serif;*/
 }
 .stream-items .item .actions-line {
     color: #999;
