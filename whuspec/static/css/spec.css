@@ -52,15 +52,7 @@
 }
 
 
-.column-right .ui-box .content ul {
-    list-style: square;
-    margin-left: 18px;
-    margin-bottom: 20px;
-}
-.column-right .ui-box .content ul li {
-    font-size: 13px;
-    margin-top: 10px;
-}
+
 .column-right .ui-box .content .btn-wrapper {
     margin: 0 30px;
 }

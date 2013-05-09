@@ -4,6 +4,14 @@
     <link rel="stylesheet" href="/static/css/signup.css">
 {% end %}
 
+{% block main_top %}
+    <div class="signup-progress">
+        <div class="step step1 active"><div>register account</div></div>
+        <div class="step step2"><div>initialize skills</div></div>
+        <div class="step step3"><div>done</div></div>
+    </div>
+{% end %}
+
 {% block column_left %}
     <div class="ui-box">
         <div class="title">欢迎使用 WHUSpec</div>
@@ -41,7 +49,7 @@
     <div class="ui-box">
         <div class="title">注意事项</div>
         <div class="content">
-            <ul>
+            <ul class="text-list">
                 <li>username should be longer than 4 letters</li>
             </ul>
         </div>

@@ -199,6 +199,16 @@ input {
     padding: 12px 0 10px 0;
 }
 
+.column-right .ui-box .text-list {
+    list-style: square;
+    margin-left: 18px;
+    margin-bottom: 20px;
+}
+.column-right .ui-box .text-list li {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
 #footer {
     /* test */
     height: 100px;
