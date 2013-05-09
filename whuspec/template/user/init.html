@@ -1,0 +1,39 @@
+{% extends ../base.html %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <link rel="stylesheet" href="/static/css/init.css">
+{% end %}
+
+{% block main_top %}
+    <div class="signup-progress">
+        <div class="step step1"><div>register account</div></div>
+        <div class="step step2 active"><div>initialize skills</div></div>
+        <div class="step step3"><div>done</div></div>
+    </div>
+{% end %}
+
+{% block column_left %}
+    <div class="ui-box">
+        <div class="title">添加已经掌握的技能</div>
+        <div class="content">
+        </div>
+        <div class="title">收藏想要学习的技能</div>
+        <div class="content">
+        </div>
+    </div>
+{% end %}
+
+{% block column_right %}
+    <div class="ui-box">
+        <div class="title">注意事项</div>
+        <div class="content">
+            <ul class="text-list">
+                <li>username should be longer than 4 letters</li>
+            </ul>
+        </div>
+    </div>
+{% end %}
+
+{% block script %}
+{% end %}

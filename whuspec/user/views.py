@@ -17,7 +17,19 @@ class SignupHandler(BaseHandler):
         pass
 
 
+class InitHandler(BaseHandler):
+    def get(self):
+        self.render('user/init.html')
+
+
+class DoneHandler(BaseHandler):
+    def get(self):
+        self.render('user/done.html')
+
+
 handlers = [
     ('/signin', SigninHandler),
     ('/signup', SignupHandler),
+    ('/init', InitHandler),
+    ('/done', DoneHandler),
 ]

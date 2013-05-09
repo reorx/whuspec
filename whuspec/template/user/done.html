@@ -1,0 +1,38 @@
+{% extends ../base.html %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <link rel="stylesheet" href="/static/css/done.css">
+{% end %}
+
+{% block main_top %}
+    <div class="signup-progress">
+        <div class="step step1"><div>register account</div></div>
+        <div class="step step2"><div>initialize skills</div></div>
+        <div class="step step3 active"><div>done</div></div>
+    </div>
+{% end %}
+
+{% block column_left %}
+    <div class="ui-box">
+        <div class="title">完成</div>
+        <div class="content">
+            We suggest you go to <a href="/specs">Specility</a> page
+            to pick some specs to start the journey
+        </div>
+    </div>
+{% end %}
+
+{% block column_right %}
+    <div class="ui-box">
+        <div class="title">注意事项</div>
+        <div class="content">
+            <ul class="text-list">
+                <li>username should be longer than 4 letters</li>
+            </ul>
+        </div>
+    </div>
+{% end %}
+
+{% block script %}
+{% end %}

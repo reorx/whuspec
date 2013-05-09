@@ -5,12 +5,23 @@
 {% end %}
 
 {% block column_left %}
+    <div class="ui-box recommend">
+        <div class="title">为你推荐</div>
+        <div class="content">
+            <!--
+            show items in block style
+            -->
+        </div>
+    </div>
     <div class="ui-box list-layout learning-most">
         <div class="title">学习最多</div>
         <div class="content">
             <div class="item">
                 <a href="#" class="name">Python Web Development</a>
                 <div class="info">
+                    <!--
+                    Click the numbers to get a avatar list of learners under the description
+                    -->
                     <span class="learners">学习者: <a href="#">30</a></span>
                     <span class="creator">创建者: <a href="#">reorx</a></span>
                 </div>
@@ -80,6 +91,11 @@
             <div class="btn-wrapper">
                 <a href="#" class="btn btn-large btn-block btn-info">Create your own</a>
             </div>
+        </div>
+    </div>
+    <div class="ui-box">
+        <div class="title">Search</div>
+        <div class="content">
         </div>
     </div>
 {% end %}
