@@ -14,6 +14,7 @@ app.route_many([
     #('/skills', 'skill.views'),
     ('/specs', 'spec.views'),
     #('/courses', 'course.views'),
+    ('/admin', 'admin.views'),
 ])
 
 
