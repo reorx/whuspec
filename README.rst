@@ -6,10 +6,33 @@ WHU Speciality
 Help student improve their ability by recommending organized skill trees (called speciality) and relevant courses through this web application.
 
 
-Relationship Diagram
---------------------
+Diagrams
+--------
 
-.. image:: ./spec_skills_tree.png
+**System Architecture**
+
+.. image:: ./images/arch.bmp
+
+**Entity Relationship**
+
+.. image:: ./images/er.bmp
+
+**Spec Hierarchy**
+
+.. image:: ./images/spec_skills_tree.png
+
+
+User Interface
+--------------
+
+**Home Page**
+
+.. image:: ./images/page-home.png
+
+**Spec Page**
+
+.. image:: ./images/page-spec.png
+
 
 References
 ----------
